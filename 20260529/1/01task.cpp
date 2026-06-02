@@ -7,7 +7,7 @@ int main(void)
     const int FIRST_NUMBER = 1;
     const int LAST_NUMBER = 10;
 
-    for (int i = FIRST_NUMBER; i < LAST_NUMBER+1; ++i)
+    for (int i = FIRST_NUMBER; i <= LAST_NUMBER; i++)
     {
         cout << i << endl;
     }
