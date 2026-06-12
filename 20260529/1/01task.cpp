@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 // 1から10まで、順番に出力
 

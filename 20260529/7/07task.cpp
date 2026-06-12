@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 // 1以上100未満の、4の倍数を出力
 

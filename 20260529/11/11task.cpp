@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 // 定価1500円の本を購入するときの、消費税と合計金額を出力
 

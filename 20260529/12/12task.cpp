@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 // 定価200円、会員価格150円のジュースで、それぞれの消費税と合計金額を出力
 

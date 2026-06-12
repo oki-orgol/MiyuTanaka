@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 // カラーコード#2DBE60のそれぞれの赤・緑・青の要素を10進数で出力
 

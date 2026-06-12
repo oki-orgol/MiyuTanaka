@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 // 1以上100以下の、3と5の公倍数を出力
 

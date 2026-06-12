@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 // 1以上10以下の、3の倍数ではない値を出力
 
