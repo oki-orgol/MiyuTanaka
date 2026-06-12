@@ -2,7 +2,7 @@
 using namespace std;
 // 定価200円、会員価格150円のジュースで、それぞれの消費税と合計金額を出力
 
-int main(void)
+int main()
 {
     const float REGULAR_PRICE = 200.0f;
     const float MEMBER_PRICE = 150.0f;
@@ -19,5 +19,8 @@ int main(void)
     memberTotalPrice = MEMBER_PRICE + memberTax;
 
     cout << "定価 消費税 "  << regularTax << "円\n" << "定価 合計金額 " << regularTotalPrice << "円\n\n" 
-         << "会員価格 消費税 "  << memberTax << "円\n" <<  "会員価格 合計金額 " << memberTotalPrice << "円" << endl;
+         << "会員価格 消費税 "  << memberTax << "円\n" <<  "会員価格 合計金額 " << memberTotalPrice << "円"
+         << endl;
+
+    return 0;
 }

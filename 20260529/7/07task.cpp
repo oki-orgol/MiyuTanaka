@@ -2,7 +2,7 @@
 using namespace std;
 // 1以上100未満の、4の倍数を出力
 
-int main(void)
+int main()
 {
     const int FIRST_NUMBER = 1;
     const int LAST_NUMBER = 100;
@@ -15,4 +15,6 @@ int main(void)
             cout << i << endl;
         }
     }
+
+    return 0;
 }

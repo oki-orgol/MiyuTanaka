@@ -21,4 +21,6 @@ int main(void)
 
 
    cout << "赤 " << red << "\n緑 " << green << "\n青 " << blue << endl;
+
+   return 0;
 }
