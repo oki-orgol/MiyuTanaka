@@ -6,6 +6,7 @@ using namespace std;
 // ループを2つ使って最小値・最大値とそれぞれの座標を出力する
 int main()
 {
+    const int size = 10;
     int a[10][10] =
     {
         {  5,364,251,751,705,847,491,121, 82,938},
@@ -20,7 +21,6 @@ int main()
         {838,813,898,383,651,186,393,305,731,666}
     };
 
-    int size = 10;
     int minVal = a[0][0];
     int maxVal = a[0][0];
     int minPosX = 0;

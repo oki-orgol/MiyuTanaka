@@ -6,6 +6,8 @@ using namespace std;
 // 全体の平均値を出力する
 int main()
 {
+    const int size = 10;
+
     int a[10][10] =
     {
         {  5,364,251,751,705,847,491,121, 82,938},
@@ -20,7 +22,6 @@ int main()
         {838,813,898,383,651,186,393,305,731,666}
     };
         
-    int size = 10;
     int total = 0;
     int answer = 0;
 
