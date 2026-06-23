@@ -1,9 +1,13 @@
-#include<iostream>
-using namespace std;
-// 各列の平均値を出力する
+#include <iostream>
 
-int main(void)
+using namespace std;
+
+
+// 各列の平均値を出力する
+int main()
 {
+    const int size = 10;
+
     int a[10][10] =
     {
         {  5,364,251,751,705,847,491,121, 82,938},
@@ -18,8 +22,6 @@ int main(void)
         {838,813,898,383,651,186,393,305,731,666}
     };
 
-    int size = 10;
-
     for (int x = 0; x < size; ++x)
     {
         int answer = 0;
@@ -29,4 +31,6 @@ int main(void)
         }
         cout << x << "列目の平均値: " << answer / size << endl;
     }
+
+    return 0;
 }
