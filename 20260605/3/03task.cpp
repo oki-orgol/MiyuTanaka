@@ -1,8 +1,10 @@
-#include<iostream>
-using namespace std;
-// 全体の平均値を出力する
+#include <iostream>
 
-int main(void)
+using namespace std;
+
+
+// 全体の平均値を出力する
+int main()
 {
     int a[10][10] =
     {
@@ -33,4 +35,6 @@ int main(void)
     answer = total / (size * size);
 
     cout << "全体の平均値: " << answer << endl;
+
+    return 0;
 }

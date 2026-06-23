@@ -1,8 +1,10 @@
-#include<iostream>
-using namespace std;
-// 各列の平均値を出力する
+#include <iostream>
 
-int main(void)
+using namespace std;
+
+
+// 各列の平均値を出力する
+int main()
 {
     int a[10][10] =
     {
@@ -29,4 +31,6 @@ int main(void)
         }
         cout << x << "列目の平均値: " << answer / size << endl;
     }
+
+    return 0;
 }

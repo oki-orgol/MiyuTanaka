@@ -1,8 +1,10 @@
-#include<iostream>
-using namespace std;
-// ループを2つ使って最小値・最大値とそれぞれの座標を出力する
+#include <iostream>
 
-int main(void)
+using namespace std;
+
+
+// ループを2つ使って最小値・最大値とそれぞれの座標を出力する
+int main()
 {
     int a[10][10] =
     {
@@ -50,4 +52,5 @@ int main(void)
          << "\n最大値: " << maxVal << "  座標x: " << maxPosX << "  座標y: " << maxPosY
          << endl;
 
+    return 0;
 }
