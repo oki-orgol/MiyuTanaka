@@ -1,14 +1,16 @@
-#include<iostream>
+#include <iostream>
+#include "Define.cpp"
+
 using namespace std;
+
+
 // 1から10まで、順番に出力
-
-int main(void)
+int main()
 {
-    const int FIRST_NUMBER = 1;
-    const int LAST_NUMBER = 10;
-
-    for (int i = FIRST_NUMBER; i <= LAST_NUMBER; i++)
+    for (int i = Define::FIRST_NUMBER; i <= Define::LAST_NUMBER; i++)
     {
         cout << i << endl;
     }
+
+    return 0;
 }
