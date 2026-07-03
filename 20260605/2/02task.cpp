@@ -9,7 +9,7 @@ int main()
     const int maxX = 10;
     const int maxY = 10;
 
-    int a[10][10] =
+    const int a[10][10] =
     {
         {  5,364,251,751,705,847,491,121, 82,938},
         {303,265,674,868, 92,194,954,244,350,980},
@@ -41,7 +41,7 @@ int main()
 
         if (a[y][x] < minVal)
         {
-            minVal = a[x][y];
+            minVal = a[y][x];
             minPosX = x;
             minPosY = y;
         }
