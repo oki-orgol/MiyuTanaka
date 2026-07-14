@@ -44,11 +44,11 @@ int main()
             }
         }
 
+        // ずらす
         for (int j = i; j > index; --j)
         {
             result[j] = result[j - 1];
         }
-
 
         result[index] = num;
 
