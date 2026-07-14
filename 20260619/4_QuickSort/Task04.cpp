@@ -5,7 +5,7 @@
 using namespace std;
 
 
-vector<int> calc(vector<int> num)
+vector<int> QuickSort(vector<int> num)
 {
     int pivot = 0;// 閾値
     vector<int> biggerArray = {};
@@ -45,7 +45,7 @@ vector<int> calc(vector<int> num)
     }
     else // 要素数が2以上で繰り返す
     {
-        smallerResult = calc(smallerArray); // 再帰処理
+        smallerResult = QuickSort(smallerArray); // 再帰処理
     }
     // ↑smallerResultが確定
 
@@ -56,7 +56,7 @@ vector<int> calc(vector<int> num)
     }
     else // 要素数が2以上で繰り返す
     {
-        biggerResult = calc(biggerArray); // 再帰処理
+        biggerResult = QuickSort(biggerArray); // 再帰処理
     }
     // ↑biggerResultが確定
 
@@ -103,7 +103,7 @@ int main()
     cout << endl;
 
     // ソート
-    result = calc(number);
+    result = QuickSort(number);
 
     cout << "ソート後の数字\n";
     for(int i = 0; i < result.size(); ++i)
