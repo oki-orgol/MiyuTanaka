@@ -1,6 +1,5 @@
 #include <iostream>
 #include <random>
-#include <iomanip>
 #include "Define.cpp"
 
 using namespace std;
