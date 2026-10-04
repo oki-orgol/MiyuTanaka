@@ -16,10 +16,10 @@ vector<Position> searchNextPositions(const Position& pos)
 
     vector<Position> checkPos = 
     {
-        {pos.x, pos.y - 1}, // 上
-        {pos.x + 1, pos.y}, // 右
-        {pos.x, pos.y + 1}, // 下
-        {pos.x -1, pos.y} // 左
+        {pos.y - 1, pos.x}, // 上
+        {pos.y, pos.x + 1}, // 右
+        {pos.y + 1, pos.x}, // 下
+        {pos.y, pos.x - 1}  // 左
     };
 
     // 行ける方向を探す
@@ -28,7 +28,7 @@ vector<Position> searchNextPositions(const Position& pos)
         Position target = checkPos[i]; // チェック対象の座標
 
         // 迷路の範囲外へのアクセスを防ぐガード
-        if (target.x < 0 || target.x >= Define::WIDTH || target.y < 0 || target.y >= Define::HEIGHT)
+        if (target.y < 0 || target.y >= Define::HEIGHT || target.x < 0 || target.x >= Define::WIDTH)
         {
             continue;
         }
@@ -49,8 +49,6 @@ int main()
     vector<Position> memory;
     // 次に行く候補場所リスト
     stack<Position> next; 
-    // // 最終的な正解ルート
-    // stack<Position> result;
     // 看板メモ（どこからきた）
     Position parentPos[Define::HEIGHT][Define::WIDTH];
     for (int y = 0; y < Define::HEIGHT; ++y)
@@ -78,7 +76,7 @@ int main()
         for (Position memPos : memory)
         {
             // もしその場所が行ったことがある（既に行った場所リストにある）なら
-            if (memPos.x == currentPos.x && memPos.y == currentPos.y)
+            if (memPos.y == currentPos.y && memPos.x == currentPos.x)
             {
                 isVisited = true;
                 break;
@@ -92,7 +90,7 @@ int main()
         }
 
         // 現在状況
-        std::cout << "探索中... x:" << currentPos.x << " y:" << currentPos.y << endl;
+        cout << "探索中... y:" << currentPos.y << " x:" << currentPos.x << endl;
 
         // 未訪問の場合↓----------------------------
 
@@ -100,7 +98,7 @@ int main()
         memory.push_back(currentPos);
 
         // ここはゴール？
-        if (currentPos.x == Define::GOAL_POS.x && currentPos.y == Define::GOAL_POS.y)
+        if (currentPos.y == Define::GOAL_POS.y && currentPos.x == Define::GOAL_POS.x)
         {
             goalReached = true;
             break;
@@ -117,7 +115,7 @@ int main()
             bool nextVisited = false;
             for (Position memPos : memory)
             {
-                if (memPos.x == nP.x && memPos.y == nP.y)
+                if (memPos.y == nP.y && memPos.x == nP.x)
                 {
                     nextVisited = true;
                     break;
@@ -150,16 +148,16 @@ int main()
             pos = parentPos[pos.y][pos.x]; 
         }
 
-        std::cout << "\n\n\n正解ルートは" << endl;
+        cout << "\n\n\n正解ルートは" << endl;
         while (!result.empty())
         {
-            std::cout << "x:" << result.top().x << " y:" << result.top().y << endl;
+            cout << "y:" << result.top().y << " x:" << result.top().x << endl;
             result.pop();
         }
     }
     else
     {
-         std::cout << "ゴールに到達できませんでした" << endl;
+        cout << "ゴールに到達できませんでした" << endl;
     }
 
     return 0;
