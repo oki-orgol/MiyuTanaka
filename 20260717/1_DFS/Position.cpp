@@ -2,6 +2,6 @@
 
 struct Position
 {
-    int x;
     int y;
+    int x;
 };
