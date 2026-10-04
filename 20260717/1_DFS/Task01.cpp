@@ -16,10 +16,10 @@ vector<Position> searchNextPositions(const Position& pos)
 
     vector<Position> checkPos = 
     {
-        {pos.y, pos.x - 1}, // 上
-        {pos.y + 1, pos.x}, // 右
-        {pos.y, pos.x + 1}, // 下
-        {pos.y -1, pos.x} // 左
+        {pos.y - 1, pos.x}, // 上
+        {pos.y, pos.x + 1}, // 右
+        {pos.y + 1, pos.x}, // 下
+        {pos.y, pos.x - 1}  // 左
     };
 
     // 行ける方向を探す
@@ -28,7 +28,7 @@ vector<Position> searchNextPositions(const Position& pos)
         Position target = checkPos[i]; // チェック対象の座標
 
         // 迷路の範囲外へのアクセスを防ぐガード
-        if (target.y < 0 || target.y >= Define::WIDTH || target.x < 0 || target.x >= Define::HEIGHT)
+        if (target.y < 0 || target.y >= Define::HEIGHT || target.x < 0 || target.x >= Define::WIDTH)
         {
             continue;
         }
@@ -90,7 +90,7 @@ int main()
         }
 
         // 現在状況
-        std::cout << "探索中... y:" << currentPos.y << " x:" << currentPos.x << endl;
+        cout << "探索中... y:" << currentPos.y << " x:" << currentPos.x << endl;
 
         // 未訪問の場合↓----------------------------
 
@@ -148,16 +148,16 @@ int main()
             pos = parentPos[pos.y][pos.x]; 
         }
 
-        std::cout << "\n\n\n正解ルートは" << endl;
+        cout << "\n\n\n正解ルートは" << endl;
         while (!result.empty())
         {
-            std::cout << "y:" << result.top().y << " x:" << result.top().x << endl;
+            cout << "y:" << result.top().y << " x:" << result.top().x << endl;
             result.pop();
         }
     }
     else
     {
-         std::cout << "ゴールに到達できませんでした" << endl;
+        cout << "ゴールに到達できませんでした" << endl;
     }
 
     return 0;
